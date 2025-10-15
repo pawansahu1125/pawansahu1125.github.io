@@ -1,164 +1,378 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pawan Sahu Productions | Director & Production House</title>
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f8f9fa;
-            color: #333;
-        }
-        header {
-            background-color: #007bff;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-        nav {
-            text-align: center;
-            padding: 10px;
-            background: #0056b3;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 20px;
-            display: inline-block;
-            font-size: 18px;
-        }
-        nav a:hover {
-            background: #004494;
-        }
-        .container {
-            max-width: 1100px;
-            margin: 20px auto;
-            padding: 20px;
-            background: white;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-        }
-        .hero {
-            text-align: center;
-            padding: 100px 20px;
-            background: url('https://raw.githubusercontent.com/pawansahu1125/pawansahu.github.io/main/bg.jpg') no-repeat center center/cover;
-            background-size: cover;
-            background-attachment: fixed;
-            background-position: center;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-        }
-        .hero-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-        }
-        .hero-content {
-            position: absolute;
-            z-index: 2;
-            text-align: center;
-            color: white;
-            width: 80%;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-        .hero h1 {
-            font-size: 48px;
-        }
-        .hero p {
-            font-size: 20px;
-            margin-bottom: 20px;
-        }
-        .container h2 {
-            text-align: center;
-        }
-        footer {
-            text-align: center;
-            padding: 10px;
-            background: #007bff;
-            color: white;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <h1>Pawan Sahu Productions</h1>
-        <p>Director | Production House | Ad Films | Promo Shoots | Reels & More</p>
-    </header>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pawan Sahu Productions | Director • Production House • Ad Films</title>
+  <meta name="description" content="Pawan Sahu Productions — Mumbai-based direction & production house for TV serials, ad films, promo shoots, short web series, reels & more. 30 years of industry experience." />
+  <meta name="keywords" content="Pawan Sahu, TV Director Mumbai, Production House, Ad Films, Promos, Reels, Creative Consultant" />
+  <meta name="author" content="Pawan Sahu Productions" />
 
-    <nav>
+  <meta property="og:title" content="Pawan Sahu Productions" />
+  <meta property="og:description" content="Delivering high‑quality direction & production services for TV, ads, promos, and more." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.pawansahu.in" />
+  <meta property="og:image" content="https://www.pawansahu.in/og-image.jpg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Pawan Sahu Productions" />
+  <meta name="twitter:description" content="Delivering high‑quality direction & production services for TV, ads, promos, and more." />
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root{
+      --bg:#0b0b0c;
+      --bg-2:#121214;
+      --text:#f5f5f7;
+      --muted:#c5c6c7;
+      --brand:#d4af37;
+      --brand-2:#9b7c1f;
+      --accent:#ffffff;
+      --container:1200px;
+      --radius:18px;
+      --shadow:0 10px 30px rgba(0,0,0,.35);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:Poppins, Montserrat, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;scroll-behavior:smooth}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{max-width:var(--container);margin-inline:auto;padding-inline:24px}
+
+    header{position:sticky;top:0;z-index:50;background:rgba(11,11,12,.8);backdrop-filter:saturate(140%) blur(8px);border-bottom:1px solid rgba(255,255,255,.06)}
+    .nav{display:flex;align-items:center;justify-content:space-between;min-height:70px}
+    .brand{display:flex;gap:12px;align-items:center;font-weight:700;letter-spacing:.4px}
+    .brand .logo{width:36px;height:36px;display:grid;place-items:center;border-radius:10px;background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#000;font-weight:800;box-shadow:var(--shadow)}
+    .nav a{opacity:.9}
+    .nav a:hover{opacity:1}
+    .menu{display:flex;gap:24px;align-items:center}
+    .cta{padding:.7rem 1rem;border-radius:999px;background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#111;font-weight:700;box-shadow:var(--shadow)}
+
+    .hero{position:relative;isolation:isolate}
+    .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(1200px 500px at 70% -10%, rgba(212,175,55,.18), transparent 60%), radial-gradient(800px 400px at 0% 20%, rgba(212,175,55,.12), transparent 60%);z-index:-2}
+    .hero .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center;padding:72px 0}
+    .kicker{color:var(--brand);text-transform:uppercase;letter-spacing:.22em;font-size:.8rem;margin-bottom:10px}
+    h1{font-size:clamp(32px,6vw,54px);line-height:1.08;margin:0 0 14px}
+    .lead{font-size:1.05rem;color:var(--muted);margin-bottom:26px}
+    .hero-card{background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.03));border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);padding:18px 18px 6px;box-shadow:var(--shadow)}
+    .badges{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+    .badge{border:1px solid rgba(255,255,255,.16);border-radius:999px;padding:.45rem .75rem;font-size:.85rem;color:var(--muted)}
+
+    section{padding:56px 0}
+    h2{font-size:clamp(26px,4.4vw,34px);margin:0 0 18px}
+    .grid{display:grid;gap:22px}
+    .grid.cols-3{grid-template-columns:repeat(3, 1fr)}
+    .grid.cols-2{grid-template-columns:repeat(2, 1fr)}
+    .card{background:var(--bg-2);border:1px solid rgba(255,255,255,.07);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}
+
+    .service{display:flex;gap:16px;align-items:flex-start}
+    .service .icon{min-width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg,rgba(212,175,55,.22),rgba(212,175,55,.08));border:1px solid rgba(212,175,55,.35)}
+
+    .portfolio-grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(220px,1fr))}
+    .thumb{position:relative;border-radius:16px;overflow:hidden;border:1px solid rgba(255,255,255,.08);background:#0e0e10}
+    .thumb img{aspect-ratio:16/9;object-fit:cover;filter:saturate(1.02) contrast(1.02)}
+    .thumb .label{position:absolute;left:10px;bottom:10px;background:rgba(0,0,0,.6);backdrop-filter:blur(6px);padding:.35rem .6rem;border-radius:999px;font-size:.8rem;border:1px solid rgba(255,255,255,.18)}
+
+    form{display:grid;gap:14px}
+    input, textarea, select{width:100%;padding:12px 14px;border-radius:12px;background:#0e0e10;border:1px solid rgba(255,255,255,.12);color:var(--text)}
+    textarea{min-height:120px;resize:vertical}
+    .btn{padding:.85rem 1.1rem;border-radius:12px;background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#111;font-weight:800;border:none;cursor:pointer}
+
+    footer{border-top:1px solid rgba(255,255,255,.06);background:#0e0e10}
+    .foot{display:grid;gap:16px;padding:26px 0;align-items:center}
+    .social{display:flex;gap:12px}
+    .social a{display:grid;place-items:center;width:40px;height:40px;border-radius:10px;border:1px solid rgba(255,255,255,.14)}
+
+    @media (max-width: 980px){
+      .hero .wrap{grid-template-columns:1fr;gap:26px}
+      .grid.cols-3{grid-template-columns:1fr 1fr}
+      .grid.cols-2{grid-template-columns:1fr}
+    }
+    @media (max-width: 620px){
+      .menu{display:none}
+      .portfolio-grid{grid-template-columns:1fr 1fr}
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Pawan Sahu Productions",
+    "url": "https://www.pawansahu.in",
+    "logo": "https://www.pawansahu.in/logo.png",
+    "founder": {"@type": "Person","name": "Pawan Sahu"},
+    "address": {"@type": "PostalAddress","addressLocality": "Mumbai","addressRegion": "MH","addressCountry": "IN"},
+    "contactPoint": [{
+      "@type": "ContactPoint","contactType": "Business","email": "pawansahu1319@gmail.com","telephone": "+91-9821079172"
+    }],
+    "sameAs": [
+      "https://www.linkedin.com/in/pawan-sahu-b385b7252",
+      "https://www.instagram.com/pawansahu11/",
+      "https://www.youtube.com/@ReelsandWheels11",
+      "https://www.imdb.com/name/nm3571141/"
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo">PS</div>
+        <a href="#home" aria-label="Home">Pawan Sahu Productions</a>
+      </div>
+      <nav class="menu" aria-label="Primary">
         <a href="#about">About</a>
         <a href="#services">Services</a>
         <a href="#portfolio">Portfolio</a>
-        <a href="#workwithus">Work With Us</a>
-        <a href="#contact">Contact</a>
-    </nav>
+        <a href="#work">Work With Us</a>
+        <a href="#contact" class="cta">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-    <div class="hero">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <h1>Bring Your Vision to Life with Pawan Sahu Productions</h1>
-            <p>Delivering High-Quality Direction & Production Services for TV, Ads, Promos, and More.</p>
-            <a href="#contact" class="cta-button">Contact Us</a>
+  <section id="home" class="hero">
+    <div class="container wrap">
+      <div>
+        <div class="kicker">Director • Production House • Ad Films • Promos • Reels</div>
+        <h1>Bring Your Vision to Life with <span style="color:var(--brand)">Pawan Sahu Productions</span></h1>
+        <p class="lead">Delivering high‑quality direction & production services for TV, ads, promos, short web series, and reels — backed by 30 years of industry experience.</p>
+        <div class="badges">
+          <a class="badge" href="#contact">Contact Us</a>
+          <a class="badge" href="#portfolio">View Portfolio</a>
+          <a class="badge" href="https://www.youtube.com/@ReelsandWheels11" target="_blank" rel="noopener">Watch Showreel</a>
         </div>
+      </div>
+      <div class="hero-card">
+        <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=1600&auto=format&fit=crop" alt="Director on set with camera and crew" />
+        <div style="display:flex;gap:10px;flex-wrap:wrap;padding:10px 6px 14px">
+          <span class="badge">Cinematic Direction</span>
+          <span class="badge">Production Management</span>
+          <span class="badge">Creative Consulting</span>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <div class="container" id="about">
+  <section id="about">
+    <div class="container grid cols-2">
+      <div>
         <h2>About Us</h2>
-        <p>Pawan Sahu Productions was founded by renowned TV serial director Pawan Sahu, with 30 years of industry experience. He has successfully directed top-rated TV serials, short web series, and short films.</p>
-        <p>With extensive experience in storytelling, cinematography, and production execution, our team ensures each project is delivered at the highest quality standards. Whether it's a TV serial, promo shoot, or short film, we bring expertise and passion to every project.</p>
-    </div>
-
-    <div class="container" id="services">
-        <h2>Our Services</h2>
-        <ul>
-            <li>🎬 TV Serial Direction</li>
-            <li>📽️ Short Web Series Production</li>
-            <li>🎥 Short Film Production</li>
-            <li>📺 Ad Film & Promo Shoots</li>
-            <li>📱 Reel & Social Media Content Creation</li>
-            <li>📝 Creative Consultation</li>
+        <p>Pawan Sahu Productions was founded by renowned TV serial director <strong>Pawan Sahu</strong>, with <strong>30 years</strong> of industry experience. He has successfully directed top‑rated TV serials, short web series, and short films.</p>
+        <p>With extensive expertise in storytelling, cinematography, and production execution, our team ensures every project is delivered at the highest quality standards. Whether it's a TV serial, promo shoot, or short film, we bring <strong>precision, expertise, and passion</strong> to every frame.</p>
+        <div class="badges">
+          <span class="badge">Mumbai, India</span>
+          <span class="badge">Award‑Winning Director</span>
+          <a class="badge" href="https://www.imdb.com/name/nm3571141/" target="_blank" rel="noopener">IMDb Profile</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3 style="margin-top:0">Highlights</h3>
+        <ul style="line-height:1.7;margin:0 0 8px 18px">
+          <li>Directed hit TV shows including <em>Sasural Simar Ka</em>, <em>Hamari Devrani</em>, <em>Udaan</em>, and <em>Saathiya</em>.</li>
+          <li>Hands‑on production leadership: schedules, budgeting, team orchestration.</li>
+          <li>Creative consulting for story development and show setups.</li>
         </ul>
+      </div>
     </div>
+  </section>
 
-    <div class="container" id="portfolio">
-        <h2>Portfolio</h2>
-        <p>📺 Hit TV Shows: Sasural Simar Ka, Hamari Devrani, Udaan, Saathiya</p>
-        <p>🏆 Critically Acclaimed: Sindoor Tere Naam Ka, Tum Bin Jaun Kahan, Phulwa, Kashi, Vaidehi, Zaara</p>
-        <p>📌 Other Notable TV Shows: Anokha Bandhan, Doli Saja Ke, Gauna Ek Pratha, Rakshabandhan, Har Ghar Kuch Kehta Hai, Lockdown Ki Love Story, Saathiya 2, Muskaan, Laado, Mukti Bandhan, Jiya Jale, Reth, Tumhari Disha, Bhabhi, Mahi Ve</p>
-        <p>🎬 Short Films & Reels: <a href="https://www.youtube.com/@ReelsandWheels11" target="_blank">Watch on YouTube</a></p>
+  <section id="services">
+    <div class="container">
+      <h2>Our Services</h2>
+      <div class="grid cols-3">
+        <div class="card service">
+          <div class="icon">🎬</div>
+          <div>
+            <h3 style="margin:6px 0 6px">TV Serial Direction</h3>
+            <p class="muted">End‑to‑end direction with a focus on narrative rhythm, performance, and scale.</p>
+          </div>
+        </div>
+        <div class="card service">
+          <div class="icon">📽️</div>
+          <div>
+            <h3 style="margin:6px 0 6px">Short Web Series Production</h3>
+            <p>Concept to completion — scripting, crew, schedules, and post production.</p>
+          </div>
+        </div>
+        <div class="card service">
+          <div class="icon">🎥</div>
+          <div>
+            <h3 style="margin:6px 0 6px">Short Film Production</h3>
+            <p>Festival‑ready shorts with cinematic storytelling and tight execution.</p>
+          </div>
+        </div>
+        <div class="card service">
+          <div class="icon">📺</div>
+          <div>
+            <h3 style="margin:6px 0 6px">Ad Films & Promo Shoots</h3>
+            <p>Impactful brand films, TVCs, and promos crafted for attention and recall.</p>
+          </div>
+        </div>
+        <div class="card service">
+          <div class="icon">📱</div>
+          <div>
+            <h3 style="margin:6px 0 6px">Reels & Social Content</h3>
+            <p>High‑quality vertical content optimized for Instagram, YouTube Shorts, and more.</p>
+          </div>
+        </div>
+        <div class="card service">
+          <div class="icon">📝</div>
+          <div>
+            <h3 style="margin:6px 0 6px">Creative Consultation</h3>
+            <p>Story development, show setup, pilots, and script doctoring.</p>
+          </div>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <div class="container" id="workwithus">
+  <section id="portfolio">
+    <div class="container">
+      <h2>Portfolio</h2>
+      <p class="lead">A selection of notable work across TV and digital.</p>
+
+      <div class="portfolio-grid" aria-label="TV Portfolio Grid">
+        <a class="thumb" href="#" aria-label="Sasural Simar Ka">
+          <img src="Sasural_Simar_Ka.png" alt="Sasural Simar Ka" />
+          <span class="label">Sasural Simar Ka</span>
+        </a>
+        <a class="thumb" href="#" aria-label="Udaan">
+          <img src="Udaan_(2014_TV_series).jpeg" alt="Udaan" />
+          <span class="label">Udaan</span>
+        </a>
+        <a class="thumb" href="#" aria-label="Hamari Devrani">
+          <img src="HamariDevraniSerial.jpg" alt="Hamari Devrani" />
+          <span class="label">Hamari Devrani</span>
+        </a>
+        <a class="thumb" href="#" aria-label="Har Ghar Kuch Kehta Hai">
+          <img src="HGKKH_SERIAL.png" alt="Har Ghar Kuch Kehta Hai" />
+          <span class="label">Har Ghar Kuch Kehta Hai</span>
+        </a>
+        <a class="thumb" href="#" aria-label="Lockdown Ki Love Story">
+          <img src="Lockdownkilovestory.jpg" alt="Lockdown Ki Love Story" />
+          <span class="label">Lockdown Ki Love Story</span>
+        </a>
+        <a class="thumb" href="#" aria-label="Shraddha">
+          <img src="Shraddha_TV_series_logo.jpg" alt="Shraddha" />
+          <span class="label">Shraddha</span>
+        </a>
+      </div>
+
+      <div class="card" style="margin-top:22px">
+        <h3 style="margin:0 0 10px">Featured Showreel</h3>
+        <div style="position:relative;padding-top:56.25%;border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,.1)">
+          <iframe style="position:absolute;inset:0;width:100%;height:100%" src="https://www.youtube.com/embed/videoseries?list=PL" title="Showreel" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="work">
+    <div class="container grid cols-2">
+      <div>
         <h2>Work With Us</h2>
-        <p>Interested in collaborating with Pawan Sahu Productions or utilizing our services? We're always open to new projects and partnerships. Please reach out to us via the contact details below to discuss your ideas.</p>
+        <p>Interested in collaborating with <strong>Pawan Sahu Productions</strong> or utilizing our services? We're always open to new projects and partnerships. Share a few details and we'll get back quickly.</p>
+        <ul style="line-height:1.8;margin:0 0 0 18px">
+          <li>TV direction & show setup</li>
+          <li>Ad films & promos</li>
+          <li>Short web series / short films</li>
+          <li>Creative consulting & pilots</li>
+        </ul>
+      </div>
+      <div class="card">
+        <form action="mailto:pawansahu1319@gmail.com" method="post" enctype="text/plain">
+          <div class="grid cols-2">
+            <div><label for="name">Name</label><input id="name" name="name" required placeholder="Your name" /></div>
+            <div><label for="email">Email</label><input id="email" name="email" type="email" required placeholder="you@example.com" /></div>
+          </div>
+          <div class="grid cols-2">
+            <div><label for="phone">Phone</label><input id="phone" name="phone" placeholder="+91‑" /></div>
+            <div>
+              <label for="project">Project Type</label>
+              <select id="project" name="project">
+                <option>TV Direction</option>
+                <option>Ad / Promo</option>
+                <option>Short Film</option>
+                <option>Web Series</option>
+                <option>Reels / Social</option>
+                <option>Creative Consultation</option>
+              </select>
+            </div>
+          </div>
+          <div>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Tell us a bit about your project…"></textarea>
+          </div>
+          <button class="btn" type="submit">Send Inquiry</button>
+        </form>
+      </div>
     </div>
+  </section>
 
-    <div class="container" id="contact">
-        <h2>Contact Us</h2>
-        <p>📧 Email: pawansahu1319@gmail.com</p>
-        <p>📞 Phone: +91-9821079172</p>
-        <p>📍 Location: Mumbai, India</p>
+  <section id="contact">
+    <div class="container grid cols-2">
+      <div class="card">
+        <h2 style="margin-top:0">Contact Us</h2>
+        <p class="lead" style="margin-top:6px">We're based in <strong>Mumbai, India</strong>. Reach out for bookings, collaborations, or consultations.</p>
+        <div class="grid cols-2">
+          <div>
+            <p style="margin:.2rem 0"><strong>Email</strong><br><a href="mailto:pawansahu1319@gmail.com">pawansahu1319@gmail.com</a></p>
+            <p style="margin:.2rem 0"><strong>Phone</strong><br><a href="tel:+919821079172">+91‑9821079172</a></p>
+          </div>
+          <div>
+            <p style="margin:.2rem 0"><strong>Location</strong><br>Mumbai, India</p>
+            <p style="margin:.2rem 0"><strong>Availability</strong><br>By appointment</p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="card" style="display:flex;justify-content:space-between;align-items:center;gap:12px">
+          <div>
+            <h3 style="margin:6px 0 6px">Connect</h3>
+            <p class="muted" style="margin:0">Follow for updates, reels, and behind‑the‑scenes.</p>
+          </div>
+          <div class="social">
+            <a aria-label="LinkedIn" href="https://www.linkedin.com/in/pawan-sahu-b385b7252" target="_blank" rel="noopener" title="LinkedIn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V24h-4zM8 8h3.8v2.2h.05c.53-1 1.83-2.2 3.77-2.2C19.4 8 22 10.1 22 14.3V24h-4v-8.5c0-2-.04-4.6-2.8-4.6-2.8 0-3.2 2.2-3.2 4.5V24H8z"/></svg>
+            </a>
+            <a aria-label="Instagram" href="https://www.instagram.com/pawansahu11/" target="_blank" rel="noopener" title="Instagram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.9.2 2.4.4.6.2 1 .4 1.5.9.5.5.7.9.9 1.5.2.5.4 1.2.4 2.4.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.9-.4 2.4-.2.6-.4 1-.9 1.5-.5.5-.9.7-1.5.9-.5.2-1.2.4-2.4.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.9-.2-2.4-.4-.6-.2-1-.4-1.5-.9-.5-.5-.7-.9-.9-1.5-.2-.5-.4-1.2-.4-2.4C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.2-1.9.4-2.4.2-.6.4-1.2.9-1.5.5-.5.9-.7 1.5-.9.5-.2 1.2-.4 2.4-.4C8.4 2.2 8.8 2.2 12 2.2m0-2.2C8.7 0 8.3 0 7 0 5.7 0 5.1.1 4.5.3 3.9.5 3.4.7 2.9 1.2 2.4 1.7 2.2 2.1 2 2.7 1.8 3.3 1.7 3.9 1.7 5.2 1.6 6.5 1.6 6.9 1.6 12s0 5.5.1 6.8c.1 1.3.2 1.9.4 2.5.2.6.4 1 1 1.6.5.5 1 .8 1.6 1 .6.2 1.2.4 2.5.4 1.3.1 1.7.1 4.9.1s3.6 0 4.9-.1c1.3-.1 1.9-.2 2.5-.4.6-.2 1-.4 1.6-1 .5-.5 1-.8 1-1.6.2-.6.4-1.2.4-2.5.1-1.3.1-1.7.1-4.9s0-3.6-.1-4.9c-.1-1.3-.2-1.9-.4-2.5-.2-.6-.4-1-1-1.6-.5-.5-1-.8-1.6-1-.6-.2-1.2-.4-2.5-.4C15.7.1 15.3 0 12 0z"/><path d="M12 5.8A6.2 6.2 0 1 0 12 18.2 6.2 6.2 0 1 0 12 5.8m0-2.2a8.4 8.4 0 1 1 0 16.8 8.4 8.4 0 1 1 0-16.8z"/><circle cx="18.4" cy="5.6" r="1.44"/></svg>
+            </a>
+            <a aria-label="YouTube" href="https://www.youtube.com/@ReelsandWheels11" target="_blank" rel="noopener" title="YouTube">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.2 31.2 0 0 0 0 12a31.2 31.2 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1 31.2 31.2 0 0 0 .5-5.8 31.2 31.2 0 0 0-.5-5.8zM9.6 15.5V8.5L16 12l-6.4 3.5z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="card" style="margin-top:16px">
+          <small style="color:var(--muted)">Prefer WhatsApp? Message us and include your project type & timeline.</small>
+          <div class="badges" style="margin-top:10px">
+            <a class="badge" href="https://wa.me/919821079172" target="_blank" rel="noopener">WhatsApp Now</a>
+          </div>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <footer>
-        <p>&copy; 2025 Pawan Sahu Productions. All Rights Reserved.</p>
-    </footer>
+  <footer>
+    <div class="container foot">
+      <div style="display:flex;gap:10px;align-items:center">
+        <div class="logo">PS</div>
+        <div>
+          <strong>Pawan Sahu Productions</strong><br>
+          <small style="color:var(--muted)">© <span id="y"></span> Pawan Sahu Productions. All Rights Reserved.</small>
+        </div>
+      </div>
+      <div style="justify-self:end">
+        <small style="color:var(--muted)">Crafting Stories That Connect.</small>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
